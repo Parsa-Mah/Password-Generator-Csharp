@@ -25,7 +25,11 @@ namespace Password_Generator
             bool copyToClipboard = true;
 
             var generatedPassword = PasswordGenerator(lenghtOfPassWord, copyToClipboard);
-            Console.WriteLine(generatedPassword);
+            Console.WriteLine("Password for lenght of "+lenghtOfPassWord+" generated! \n \n" +generatedPassword+"\n");
+            if(copyToClipboard)
+            Console.WriteLine("Password automatically copied to clipboard! \n");
+            Console.WriteLine("Press any key to continue.... ");
+            Console.ReadLine();
         }
 
         static String PasswordGenerator(int lenght, bool copyToClipboard)
